@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --brand-gradient: linear-gradient(
+    115deg,
+    #ffdd9d 0%,
+    #f6a750 18%,
+    #d37d3f 35%,
+    #a15a2f 52%,
+    #7e4426 74%,
+    #3a1c0f 100%
+  );
+  --brand-sheen: rgba(255, 221, 157, 0.12);
+  --glass-dark: rgba(12, 18, 28, 0.75);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont,
+    'Segoe UI', sans-serif;
+  background: #f9fafb;
+  color: #020617;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.dark body {
+  background: #05070d;
+  color: #f8fafc;
+}
+
+code {
+  font-family: 'JetBrains Mono', 'SFMono-Regular', Consolas, 'Liberation Mono',
+    Menlo, monospace;
+}
+
+.brand-gradient {
+  background: var(--brand-gradient) !important;
+  color: #1e1b16 !important;
+}
+
+.glass-panel {
+  background: rgba(15, 23, 42, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 20px 45px rgba(2, 6, 23, 0.6);
+  backdrop-filter: blur(20px);
+}
+
+.soft-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 15px 35px rgba(2, 6, 23, 0.45);
+}
+
+.pill {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 0.35rem 0.85rem;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.page-shell {
+  min-height: calc(100vh - 64px);
+  padding: clamp(1.5rem, 4vw, 3rem);
+  background: radial-gradient(circle at top, rgba(255, 221, 157, 0.12), transparent 40%),
+    radial-gradient(circle at 20% 20%, rgba(161, 90, 47, 0.2), transparent 35%),
+    #05070d;
+}
+
+.section-title {
+  font-size: clamp(1.5rem, 2vw, 2rem);
+  font-weight: 600;
+  color: #f8fafc;
+}
+
+.section-subtitle {
+  color: rgba(248, 250, 252, 0.7);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 221, 157, 0.5);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Print styles */
+@media print {
+  nav,
+  button:not(.print-button),
+  a:not(.print-link) {
+    display: none !important;
+  }
+
+  body {
+    background: #fff;
+    color: #000;
+  }
+
+  .container {
+    max-width: 100%;
+    padding: 0;
+  }
+}
