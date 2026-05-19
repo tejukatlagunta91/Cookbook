@@ -1,4 +1,4 @@
-Cookbook – Full Stack Recipe Management Application
+Cookbook – Recipe Management Web Application
 
 A modern and responsive **Recipe Management Web Application** built using **React + Vite**.
 Cookbook helps users organize, manage, search, and scale recipes with an interactive and user-friendly interface.
